@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private GameObject BulletsContainer;
     
     [SerializeField]
-    private float _bulletInteval = 0.5f;
+    private float _bulletInteval = 0.1f;
     
     // Start is called before the first frame update
     void Start()
