@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private float _bulletInteval = 0.1f;
+
+    [SerializeField]
+    private int _level = 1;
     
     // Start is called before the first frame update
     void Start()
