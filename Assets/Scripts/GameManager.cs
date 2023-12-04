@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     private TextMeshProUGUI _levelTmp;
     
-    // Start is called before the first frame update
     private void Start()
     {
         BulletsContainer = GameObject.Find("Bullets") ?? new GameObject("Bullets");
@@ -29,7 +28,6 @@ public class GameManager : MonoBehaviour
         _levelTmp.text = $"Level {_level}";
     }
 
-    // Update is called once per frame
     private void Update()
     {
         

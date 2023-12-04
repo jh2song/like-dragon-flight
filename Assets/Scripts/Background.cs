@@ -19,7 +19,6 @@ public class Background : MonoBehaviour
 
     private int _switchingTarget = 1;
     
-    // Start is called before the first frame update
     private void Start()
     {
         if (_background1 == null || _background2 == null)
@@ -31,7 +30,6 @@ public class Background : MonoBehaviour
         _upPos = _background2.transform.position;
     }
 
-    // Update is called once per frame
     private void Update()
     {
         _background1.transform.position = _background1.transform.position +
