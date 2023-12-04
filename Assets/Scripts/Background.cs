@@ -32,7 +32,7 @@ public class Background : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _background1.transform.position = _background1.transform.position +
                                           Vector3.down * (_mapDropSpeed * Time.deltaTime);

@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI _levelTmp;
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         BulletsContainer = GameObject.Find("Bullets") ?? new GameObject("Bullets");
         InvokeRepeating("GenerateBullet", 0f, _bulletInteval);
@@ -30,12 +30,12 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
 
-    void GenerateBullet()
+    private void GenerateBullet()
     {
         GameObject newBullet = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0f, 0f, 90f), BulletsContainer.transform);
         newBullet.transform.position = Player.transform.position + Vector3.up;
