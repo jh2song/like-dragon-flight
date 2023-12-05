@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Enemy Enemy;
+    public GameObject Enemy;
     
     private void Start()
     {
-        
+         
     }
 
     private void Update()

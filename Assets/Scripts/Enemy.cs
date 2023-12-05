@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private EnemyBullet _enemyBullet;
+    public GameObject EnemyBullet;
     
     private void Start()
     {
