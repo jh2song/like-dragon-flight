@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +14,8 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private float _bulletInteval = 0.1f;
-
-    [SerializeField]
-    private int _level = 1;
+    
+    public static int Level { get; set; } = 1;
 
     private TextMeshProUGUI _levelTmp;
     
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("GenerateBullet", 0f, _bulletInteval);
 
         _levelTmp = GameObject.Find("LevelTxt").GetComponent<TextMeshProUGUI>();
-        _levelTmp.text = $"Level {_level}";
+        _levelTmp.text = $"Level {Level}";
     }
 
     private void Update()
