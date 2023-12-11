@@ -345,11 +345,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &798828778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3628738668068181173, guid: e291f610588e82f4886fab91bbe1ccb7, type: 3}
-  m_PrefabInstance: {fileID: 618754466911684354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &900415324
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,9 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30700b605120a7b43af0730920b05e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 798828778}
-  Bullet: {fileID: 3165293660784898866, guid: 6237749577294c2429c6078d814f6758, type: 3}
-  _bulletInteval: 0.1
 --- !u!4 &1447183754
 Transform:
   m_ObjectHideFlags: 0
@@ -761,6 +753,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2081311081416614369, guid: e291f610588e82f4886fab91bbe1ccb7, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 3165293660784898866, guid: 6237749577294c2429c6078d814f6758, type: 3}
     - target: {fileID: 3628738668068181173, guid: e291f610588e82f4886fab91bbe1ccb7, type: 3}
       propertyPath: m_Name
       value: Player

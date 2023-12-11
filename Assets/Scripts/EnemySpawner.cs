@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     };
 
     private float _spawnY = 4f;
-
+    
     public void Spawn()
     {
         GameObject enemyPool = GameObject.Find("EnemyPool") ?? new GameObject("EnemyPool");
