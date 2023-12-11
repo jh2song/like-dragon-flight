@@ -29,6 +29,12 @@ public class EnemySpawner : MonoBehaviour
             Vector3 position = new Vector3(spawnPosX[i], _spawnY, 0);
             GameObject go = Instantiate(Enemy, position, Quaternion.identity, enemyPool.transform);
             go.name = $"EnemyClone {i}";
+            
+            Enemy enemyScript = go.GetComponent<Enemy>();
+            if (enemyScript != null)
+            {
+                enemyScript.EnableInvincibility(1.0f); // 1초간 무적
+            }
         }
     }
 }
