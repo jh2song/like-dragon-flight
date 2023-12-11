@@ -19,13 +19,16 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
+        GameObject enemyPool = GameObject.Find("EnemyPool") ?? new GameObject("EnemyPool");
+        
         int level = GameManager.Level;
         float[] spawnPosX = _spwanX.OrderBy(x => random.Next()).Take(level).ToArray();
 
-        foreach (int x in spawnPosX)
+        for (int i = 0; i < spawnPosX.Length; i++)
         {
-            Vector3 position = new Vector3(x, _spawnY, 0);
-            Instantiate(Enemy, position, Quaternion.identity);
+            Vector3 position = new Vector3(spawnPosX[i], _spawnY, 0);
+            GameObject go = Instantiate(Enemy, position, Quaternion.identity, enemyPool.transform);
+            go.name = $"EnemyClone {i}";
         }
     }
 }

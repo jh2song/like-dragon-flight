@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
         _levelTmp = GameObject.Find("LevelTxt").GetComponent<TextMeshProUGUI>();
         _levelTmp.text = $"Level {Level}";
+        
+        GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().Spawn();
     }
 
     private void Update()
