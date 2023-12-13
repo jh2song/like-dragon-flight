@@ -10,7 +10,8 @@ public class Bullet : MonoBehaviour
     private float _speed = 5f;
 
     private GameObject _enemyPool;
-    
+    private bool _isLevelingUp = false;
+
     private void Start()
     {
         _enemyPool = GameObject.Find("EnemyPool");
@@ -25,7 +26,7 @@ public class Bullet : MonoBehaviour
     {
         transform.position += Vector3.up * _speed * Time.deltaTime;
         
-        if (transform.position.y > 7.0f)
+        if (transform.position.y > 14.0f)
             Destroy(this.gameObject);
     }
 
@@ -40,16 +41,29 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator CheckEnemiesAndLevelUp()
     {
-        yield return new WaitForEndOfFrame(); // 현재 프레임이 끝나기를 기다립니다.
-
-        if (_enemyPool.transform.childCount == 0)
+        Debug.Log("CheckEnemiesAndLevelUp 시작");
+        
+        if (!_isLevelingUp)
         {
-            GameManager.Level++;
+            _isLevelingUp = true;
 
-            GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().Spawn();
+            yield return new WaitForEndOfFrame(); // 현재 프레임이 끝나기를 기다립니다.
 
-            TextMeshProUGUI levelTmp = GameObject.Find("LevelTxt").GetComponent<TextMeshProUGUI>();
-            levelTmp.text = $"Level {GameManager.Level}";
+            if (_enemyPool.transform.childCount == 0)
+            {
+                GameManager.Level++;
+                
+                Debug.Log("대기 전");
+                yield return new WaitForSeconds(2);
+                Debug.Log("대기 후");   
+                
+                GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().Spawn();
+
+                TextMeshProUGUI levelTmp = GameObject.Find("LevelTxt").GetComponent<TextMeshProUGUI>();
+                levelTmp.text = $"Level {GameManager.Level}";
+            }
+
+            _isLevelingUp = false;
         }
     }
 
