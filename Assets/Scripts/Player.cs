@@ -32,4 +32,6 @@ public class Player : MonoBehaviour
         GameObject newBullet = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0f, 0f, 90f), BulletsContainer.transform);
         newBullet.transform.position = transform.position + Vector3.up;
     }
+    
+    
 }

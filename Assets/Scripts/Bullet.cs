@@ -41,8 +41,6 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator CheckEnemiesAndLevelUp()
     {
-        Debug.Log("CheckEnemiesAndLevelUp 시작");
-        
         if (!_isLevelingUp)
         {
             _isLevelingUp = true;
@@ -53,9 +51,7 @@ public class Bullet : MonoBehaviour
             {
                 GameManager.Level++;
                 
-                Debug.Log("대기 전");
                 yield return new WaitForSeconds(2);
-                Debug.Log("대기 후");   
                 
                 GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>().Spawn();
 
