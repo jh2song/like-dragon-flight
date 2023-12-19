@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -9,7 +11,7 @@ public class Player : MonoBehaviour
     
     public GameObject Bullet;
     private GameObject BulletsContainer;
-    
+
     private void Start()
     {
         transform.position = new Vector3(0f, -4f, 0f);
@@ -32,6 +34,14 @@ public class Player : MonoBehaviour
         GameObject newBullet = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0f, 0f, 90f), BulletsContainer.transform);
         newBullet.transform.position = transform.position + Vector3.up;
     }
-    
-    
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name.Contains("EnemyBullet"))
+        {
+            GameManager.Hp--;
+            TextMeshProUGUI HpTmp = GameObject.Find("HpTxt").GetComponent<TextMeshProUGUI>();
+            HpTmp.text = $"HP : {GameManager.Hp}";
+        }
+    }
 }
