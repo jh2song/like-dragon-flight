@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public GameObject EnemyBullet;
     public GameObject EnemyBullets;
     
-    private float _bulletInteval = 0.5f;
+    private float _bulletInteval = 2f;
     
     private void Start()
     {
