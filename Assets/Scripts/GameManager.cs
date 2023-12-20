@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
@@ -80,27 +81,22 @@ public class GameManager : MonoBehaviour
 
     public void OnRetryBtnClicked()
     {
-        Transform hudTransform = _canvas.transform.Find("HUD");
-        Transform gameOverUITransform = _canvas.transform.Find("GameOverUI");
+        string sceneName = SceneManager.GetActiveScene().name;
 
-        if (hudTransform != null)
-        {
-            hudTransform.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogError("HUD 오브젝트를 찾을 수 없습니다.");
-        }
+        SceneManager.LoadScene(sceneName);
+        Hp = 3;
+        Level = 1;
+    }
+    
+    public void OnNextStageBtnClicked()
+    {
+        string sceneName = SceneManager.GetActiveScene().name;
 
-        if (gameOverUITransform != null)
-        {
-            gameOverUITransform.gameObject.SetActive(true);
-        }
-        else
-        {
-            Debug.LogError("GameOverUI 오브젝트를 찾을 수 없습니다.");
-        }
-
-        Time.timeScale = 1f;
+        SceneManager.LoadScene(sceneName);
+        Hp = 3;
+        Level = 1;
+        
+        EnemyBullet.Speed += 2f;
+        Enemy.BulletInteval -= 0.2f;
     }
 }

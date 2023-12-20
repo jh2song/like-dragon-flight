@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    public float Speed { get; set; } = 3f;
+    public static float Speed { get; set; } = 3f;
 
     private void Update()
     {

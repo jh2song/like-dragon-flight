@@ -7,13 +7,13 @@ public class Enemy : MonoBehaviour
     public GameObject EnemyBullet;
     public GameObject EnemyBullets;
     
-    private float _bulletInteval = 2f;
+    public static float BulletInteval { get; set; } = 2f;
     
     private void Start()
     {
         EnemyBullets = GameObject.Find("EnemyBullets") ?? new GameObject("EnemyBullets");    
         
-        InvokeRepeating("GenerateBullet", 0f, _bulletInteval);
+        InvokeRepeating("GenerateBullet", 0f, BulletInteval);
     
         transform.rotation = Quaternion.Euler(0f, 0f, 270f);
     }
