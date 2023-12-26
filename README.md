@@ -13,6 +13,12 @@
 
 ## 사용기술
 - Unity, C#
+- Git, GitHub
+- Rider
+
+## 개발기간
+- `2023-11-22` ~ `2023-12-23`
+
 
 ## Privacy policy
 Effective Date: December 23, 2023
