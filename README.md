@@ -1,5 +1,9 @@
 # Spaceship in Galaxy
 
+<img src="https://github.com/jh2song/like-dragon-flight/assets/43688074/0eead8f6-b871-4367-aacb-6bd2ed28bdc3" width="200" height="400"/>
+<img src="https://github.com/jh2song/like-dragon-flight/assets/43688074/df67be1e-e302-4c72-b7ad-d789ee227931" width="200" height="400"/>
+<img src="https://github.com/jh2song/like-dragon-flight/assets/43688074/890ef89a-f4c6-460e-8531-ade571cecde9" width="200" height="400"/>
+
 ## 시작에 앞서 이 프로젝트는 절대로 다른 프로젝트, 프레임워크에 덧씌운게 아닌 제가 밑바닥부터 구현을 함을 알려드립니다.
 
 [유튜브 시연 영상](https://www.youtube.com/watch?v=AQrVwX5i1nI)
