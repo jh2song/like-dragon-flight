@@ -6,8 +6,13 @@
 
 ## 시작에 앞서 이 프로젝트는 절대로 다른 프로젝트, 프레임워크에 덧씌운게 아닌 제가 밑바닥부터 구현을 함을 알려드립니다.
 
-- 유튜브 시연 영상
+- 유튜브 시연 영상(밑의 비디오를 클릭)
+
+
 [![Video Label](http://img.youtube.com/vi/AQrVwX5i1nI/0.jpg)](https://www.youtube.com/watch?v=AQrVwX5i1nI)
+
+
+
 - [프로젝트 내에 코드](https://github.com/jh2song/like-dragon-flight/tree/main/Assets/Scripts)
 
 ## 프로젝트 소개
