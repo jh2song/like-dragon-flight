@@ -6,11 +6,13 @@
 
 ## 시작에 앞서 이 프로젝트는 절대로 다른 프로젝트, 프레임워크에 덧씌운게 아닌 제가 밑바닥부터 구현을 함을 알려드립니다.
 
-[유튜브 시연 영상](https://www.youtube.com/watch?v=AQrVwX5i1nI)
+- 유튜브 시연 영상
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/AQrVwX5i1nI" title="[유튜브 CC자막] Spaceship in Galaxy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
-[프로젝트 내에 코드](https://github.com/jh2song/like-dragon-flight/tree/main/Assets/Scripts)
+
+- [프로젝트 내에 코드](https://github.com/jh2song/like-dragon-flight/tree/main/Assets/Scripts)
 
 ## 프로젝트 소개
 이 프로젝트는 예전에 유행한 `드래곤 플라이트`게임에 영향을 받아 그와 유사한 슈팅게임을 직접 개발하였습니다.
